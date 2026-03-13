@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #f0350f;
+  --color-bg-light: #f8f6f5;
+  --color-bg-dark: #221310;
+}
+
+@layer utilities {
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-marquee {
+    animation: scroll 20s linear infinite;
+  }
+}
+
+body {
+  @apply bg-bg-light text-slate-900 font-sans;
+}
+
+.dark body {
+  @apply bg-bg-dark text-slate-100;
+}

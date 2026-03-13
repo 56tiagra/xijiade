@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YunHui | The Art of the Dumpling</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#f0350f',
+                        'bg-light': '#f8f6f5',
+                        'bg-dark': '#221310',
+                    },
+                    fontFamily: {
+                        sans: ['Work Sans', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            animation: scroll 20s linear infinite;
+        }
+        .selection-primary::selection {
+            background-color: #f0350f;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-[#f8f6f5] text-slate-900 font-sans selection-primary">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-[#f8f6f5]/80 backdrop-blur-md border-b border-[#f0350f]/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex h-20 items-center justify-between">
+            <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f0350f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+                <span class="text-2xl font-black tracking-tighter uppercase">YunHui</span>
+            </div>
+            <div class="hidden md:flex items-center gap-12 font-medium text-sm tracking-widest uppercase">
+                <a href="#" class="hover:text-[#f0350f] transition-colors" data-t="nav-menu">Menu</a>
+                <a href="#" class="hover:text-[#f0350f] transition-colors" data-t="nav-philosophy">Philosophy</a>
+                <a href="#" class="hover:text-[#f0350f] transition-colors" data-t="nav-locations">Locations</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button id="lang-toggle" class="flex items-center gap-2 px-4 py-2 border-2 border-[#f0350f] text-[#f0350f] hover:bg-[#f0350f] hover:text-white transition-all font-bold rounded-lg text-xs tracking-tighter uppercase">
+                    EN | 中文
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-[90vh] flex flex-col lg:flex-row overflow-hidden border-b-4 border-[#f0350f]">
+        <div class="relative w-full lg:w-1/2 h-1/2 lg:h-full group overflow-hidden border-b-2 lg:border-b-0 lg:border-r-2 border-[#f0350f]">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3CgwOelquldpg5OaOFSpxysYEZ3bsNdr5aPjXdKKg4gpEwogH7hf2LOSqUYEAZnfcSxu6sY3Dt8bTajfUlP5l7wE-vSdrk6gwmGKG8YE-ILBfjgFd9oXmntQb8LvnVqWjfXaLwu8esh-Gvh6HKU8EBqSxHtZiae-hQsrDcMkJowRuoihb4qJ5hY9Lpa1XwG-dGoVx4d-ocE-WdCrMnw9TE0Mc5MdttFYjVgAI0--km-itHLDVt6TCw3FAPnpOVi1vARtGeTvpW3s')"></div>
+            <div class="absolute inset-0 bg-[#f0350f]/10 group-hover:bg-transparent transition-colors duration-500"></div>
+            <div class="absolute bottom-8 left-8">
+                <h2 class="text-white text-6xl font-black uppercase leading-none drop-shadow-xl" data-t="hero-dumpling">水饺</h2>
+                <p class="text-white font-bold tracking-[0.3em] uppercase mt-2" data-t="hero-dumpling-sub">The Dumpling</p>
+            </div>
+        </div>
+
+        <div class="relative w-full lg:w-1/2 h-1/2 lg:h-full group overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAMtSQBM33DEzuCJQdIl5bO50xlWAI-cRZ-meYsvr1G0imaIyV6Gl3iis6g9-a_XLuSWJsIyETU610cMWHz8eQjHlGnPMWnQn1CCQIiUDPirhNcyYUaId42Gkoy1tZn5FlHitTlR_kOEnh9bJJSnG0IdVOANcFl7r5Qj8tEuSdUGd4apsFL68q0mAF_MNfNHcNSgwxQp_yRBZrxfAKZ3mLquw12AaS9rjRl5DOBkxqahUDIHgyBhGQnJ5Z440cHq9Xe_B4CXwWbgus')"></div>
+            <div class="absolute inset-0 bg-[#f0350f]/10 group-hover:bg-transparent transition-colors duration-500"></div>
+            <div class="absolute bottom-8 right-8 text-right">
+                <h2 class="text-white text-6xl font-black uppercase leading-none drop-shadow-xl" data-t="hero-fried-bun">煎包</h2>
+                <p class="text-white font-bold tracking-[0.3em] uppercase mt-2" data-t="hero-fried-bun-sub">The Fried Bun</p>
+            </div>
+        </div>
+
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none text-center hidden lg:block">
+            <div class="bg-[#f0350f] text-white p-8 rounded-full h-48 w-48 flex flex-col items-center justify-center border-8 border-[#f8f6f5] shadow-2xl">
+                <span class="text-sm font-bold tracking-widest uppercase mb-1" data-t="hero-coming">Coming</span>
+                <span class="text-4xl font-black italic uppercase leading-none" data-t="hero-soon">Soon</span>
+                <div class="h-px w-12 bg-white my-2"></div>
+                <span class="text-xs font-bold" data-t="hero-coming-cn">敬请期待</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="bg-[#f0350f] text-white py-6 overflow-hidden border-b-4 border-slate-900">
+        <div class="animate-marquee whitespace-nowrap">
+            <span class="text-4xl lg:text-7xl font-black uppercase tracking-tighter px-4" data-t="marquee-text"></span>
+            <span class="text-4xl lg:text-7xl font-black uppercase tracking-tighter px-4" data-t="marquee-text"></span>
+            <span class="text-4xl lg:text-7xl font-black uppercase tracking-tighter px-4" data-t="marquee-text"></span>
+            <span class="text-4xl lg:text-7xl font-black uppercase tracking-tighter px-4" data-t="marquee-text"></span>
+        </div>
+    </div>
+
+    <!-- Intro Section -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-12 py-24 grid lg:grid-cols-2 gap-24 items-center">
+        <div>
+            <h1 class="text-7xl lg:text-9xl font-black tracking-tighter leading-none mb-12" id="intro-title"></h1>
+            <div class="flex flex-col gap-8 max-w-md">
+                <div class="border-l-4 border-[#f0350f] pl-6">
+                    <p class="text-xl font-medium mb-2" data-t="intro-subtitle">Heritage meets the modern plate.</p>
+                    <p class="text-slate-500" data-t="intro-desc">Our recipes are passed down through generations, refined for the contemporary palate without losing the soul of the traditional kitchen.</p>
+                </div>
+                <div class="border-l-4 border-[#f0350f] pl-6">
+                    <p class="text-xl font-medium mb-2" data-t="intro-subtitle-cn">传承与现代交汇。</p>
+                    <p class="text-slate-500" data-t="intro-desc-cn">我们的食谱代代相传，为当代口味进行改良，同时不失传统厨房的灵魂。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative">
+            <div class="aspect-[4/5] bg-slate-200 overflow-hidden rounded-xl border-4 border-slate-900 shadow-2xl">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6G_Dgphe5kKMspaJU3iXCiYJLooBMlVgIiLTYoMxmkTP5V49sfdBfx3UOCCxS8YDYd4Tg2VSyHmSZQBLrIfodKhNNDTV9e7VucoE-yOrZbA7VqDJGyfMd71_d-3lBDYGwqwmJtbe1m4_oe_1j30sihkwiYXjGnBO2D2cTtxiqYuBDMXvbmEgbNizdbaZcQTE6-QC5RVuoglwMj4bNguJyWn0EEAoH8nb5C2EfkOpzLNfPl848fVIt3j8iTW2zd45FcOeWrDgdTi4" alt="Chef" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+            </div>
+            <div class="absolute -bottom-8 -left-8 bg-[#f8f6f5] border-4 border-slate-900 p-8 max-w-xs shadow-xl">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="#f0350f" stroke="#f0350f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-4"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <p class="text-sm font-bold italic" data-t="intro-quote">"YunHui isn't just a meal; it's a narrative of tradition and technique."</p>
+                <p class="text-xs uppercase tracking-widest mt-4 text-slate-500">— <span data-t="intro-quote-author">Traditionalist Review</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crafted Daily Section -->
+    <section class="bg-slate-900 text-white py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                <h3 class="text-5xl lg:text-7xl font-black uppercase leading-none tracking-tighter">
+                    <span data-t="crafted-title">CRAFTED</span> <br/><span class="text-[#f0350f]" data-t="crafted-subtitle">DAILY</span>
+                </h3>
+                <p class="max-w-sm text-slate-400 font-medium leading-relaxed" data-t="crafted-desc"></p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="group">
+                    <div class="aspect-square bg-slate-800 overflow-hidden mb-6 border-b-2 border-[#f0350f]">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkq4hLyWmI8kuEhdGyFWuthSbpKhTii8y2Lge1N59bZSpnJxJNOpnCsMSurLsLYV1O7BQnteRCR9rwbAO-cZNYEYvHk1FLh4Q9TxNX7Pq5jivbLIgSp4Ri7rOalw2_lRvczOha1UlVO-HMLveJtNTj0zvFPOtWHsqNVwNeA7-LyTzYuUy7OtockSR2NeHCWigGmt12z2AGev_dgQ3Zw2wOi2ZRyyVGcq6rBmc36ZUJMSMCZ9YuPgfyoNTDpERBpNv5Sjelw-kaHwI" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2" data-t="item-1-name">Pork & Ginger 水饺</h4>
+                    <p class="text-slate-400 text-sm italic" data-t="item-1-desc">The timeless classic, perfectly balanced.</p>
+                </div>
+                <div class="group">
+                    <div class="aspect-square bg-slate-800 overflow-hidden mb-6 border-b-2 border-[#f0350f]">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLIEzPeZ7WzsNPOVWgjtq6bvJYZU90POvejJLiqaPaSIPxAUnHalfBiA8PGEwjj97Qsqh_sRW2Wqz6caahuReSkvVrSyZEcoDVeyPgYv6TlZso-5pfQX3368Ffrcd0YQZOI9-FvBzrlgMGTt3XszvetAWYod3gNwUr7vxNHGDu53uWJH5E0udvKkTYqVw0RcFhe8Tzs3qUXRAa-4WiWxyKfzIiv9HVGST1SPzQNm1dYk7nfR_CHEdbStvGDy0BHqHPdLq9lJPTsC8" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2" data-t="item-2-name">Golden Beef 煎包</h4>
+                    <p class="text-slate-400 text-sm italic" data-t="item-2-desc">Crunch meets succulent, savory depth.</p>
+                </div>
+                <div class="group">
+                    <div class="aspect-square bg-slate-800 overflow-hidden mb-6 border-b-2 border-[#f0350f]">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6keGQPEo_7IzAAt-XiNcWgTVEXYjZsC3UCJVyabQmfXp0lJDA_T-UrjpQtyERxQf2uxNT9sprfOxNjohrt47SWSAxnqFiWpdRfbifE1htnIEUmYTUSFOVoqWx1vr3C7I_jOSNbohn7azQpoRe64ctvJjkAT8Lxx4V3BZmgEk0HUBv5-iTD7gOL1TgwYuU9pizszyMkOmwfZDyhflbqnWYD434zCwe3x_TT-lPuc7BcIOYNiclzsswccDnq3P28G1Fu-JC_USKIWY" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2" data-t="item-3-name">Wild Mushroom 蔬饺</h4>
+                    <p class="text-slate-400 text-sm italic" data-t="item-3-desc">Earthy richness for the plant-inclined.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#f8f6f5] border-t-2 border-[#f0350f] pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-12 mb-24">
+                <div class="text-8xl lg:text-[12rem] font-black uppercase tracking-tighter opacity-10 leading-none select-none">
+                    YUNHUI
+                </div>
+                <div class="space-y-6">
+                    <h5 class="text-xl font-bold" data-t="footer-inquiries">Inquiries</h5>
+                    <a href="mailto:hello@considered.com.au" class="text-3xl lg:text-5xl font-black text-[#f0350f] hover:opacity-80 transition-opacity flex items-center gap-4">
+                        hello@considered.com.au
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 text-xs font-bold tracking-[0.2em] uppercase text-slate-500">
+                <div class="flex gap-8">
+                    <a href="#" class="hover:text-[#f0350f] transition-colors">Instagram</a>
+                    <a href="#" class="hover:text-[#f0350f] transition-colors">Newsletter</a>
+                </div>
+                <div data-t="footer-copyright"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            EN: {
+                'nav-menu': 'Menu',
+                'nav-philosophy': 'Philosophy',
+                'nav-locations': 'Locations',
+                'hero-dumpling': '水饺',
+                'hero-dumpling-sub': 'The Dumpling',
+                'hero-fried-bun': '煎包',
+                'hero-fried-bun-sub': 'The Fried Bun',
+                'hero-coming': 'Coming',
+                'hero-soon': 'Soon',
+                'hero-coming-cn': '敬请期待',
+                'marquee-text': 'Coming Soon 敬请期待 • YunHui Editorial Table • ',
+                'intro-title': 'THE ART <br/>OF THE <br/><span class="text-[#f0350f] italic">DUMPLING</span>',
+                'intro-subtitle': 'Heritage meets the modern plate.',
+                'intro-desc': 'Our recipes are passed down through generations, refined for the contemporary palate without losing the soul of the traditional kitchen.',
+                'intro-subtitle-cn': '传承与现代交汇。',
+                'intro-desc-cn': '我们的食谱代代相传，为当代口味进行改良，同时不失传统厨房的灵魂。',
+                'intro-quote': '"YunHui isn\'t just a meal; it\'s a narrative of tradition and technique."',
+                'intro-quote-author': 'Traditionalist Review',
+                'crafted-title': 'CRAFTED',
+                'crafted-subtitle': 'DAILY',
+                'crafted-desc': 'Fresh ingredients, handmade dough, and the perfect sear. Our dumplings and buns are prepared in small batches to ensure excellence.',
+                'item-1-name': 'Pork & Ginger 水饺',
+                'item-1-desc': 'The timeless classic, perfectly balanced.',
+                'item-2-name': 'Golden Beef 煎包',
+                'item-2-desc': 'Crunch meets succulent, savory depth.',
+                'item-3-name': 'Wild Mushroom 蔬饺',
+                'item-3-desc': 'Earthy richness for the plant-inclined.',
+                'footer-inquiries': 'Inquiries',
+                'footer-copyright': '© 2024 YUNHUI. PART OF CONSIDERED.COM.AU',
+                'btn-lang': 'EN | 中文'
+            },
+            CN: {
+                'nav-menu': '菜单',
+                'nav-philosophy': '理念',
+                'nav-locations': '门店',
+                'hero-dumpling': '水饺',
+                'hero-dumpling-sub': '传统手工水饺',
+                'hero-fried-bun': '煎包',
+                'hero-fried-bun-sub': '金牌生煎包',
+                'hero-coming': '敬请',
+                'hero-soon': '期待',
+                'hero-coming-cn': 'Coming Soon',
+                'marquee-text': '敬请期待 Coming Soon • 云徽食桌 YunHui Editorial Table • ',
+                'intro-title': '水饺的 <br/><span class="text-[#f0350f] italic">艺术</span>',
+                'intro-subtitle': '传承与现代交汇。',
+                'intro-desc': '我们的食谱代代相传，为当代口味进行改良，同时不失传统厨房的灵魂。',
+                'intro-subtitle-cn': 'Heritage meets the modern plate.',
+                'intro-desc-cn': 'Our recipes are passed down through generations, refined for the contemporary palate.',
+                'intro-quote': '"云徽不仅是一顿饭；它是传统与技艺的叙事。"',
+                'intro-quote-author': '传统主义评论',
+                'crafted-title': '每日',
+                'crafted-subtitle': '手作',
+                'crafted-desc': '新鲜食材，手工面团，完美煎制。我们的水饺和煎包均小批量制作，以确保品质卓越。',
+                'item-1-name': '猪肉生姜水饺',
+                'item-1-desc': '永恒的经典，完美的平衡。',
+                'item-2-name': '金牌牛肉煎包',
+                'item-2-desc': '脆爽与多汁的碰撞，咸鲜深厚。',
+                'item-3-name': '野山珍蔬饺',
+                'item-3-desc': '为素食者准备的大地芬芳。',
+                'footer-inquiries': '咨询',
+                'footer-copyright': '© 2024 云徽. 隶属于 CONSIDERED.COM.AU',
+                'btn-lang': '中文 | EN'
+            }
+        };
+
+        let currentLang = 'EN';
+
+        function updateContent() {
+            const t = translations[currentLang];
+            
+            // Update elements with data-t attribute
+            document.querySelectorAll('[data-t]').forEach(el => {
+                const key = el.getAttribute('data-t');
+                if (t[key]) {
+                    el.innerHTML = t[key];
+                }
+            });
+
+            // Update special elements
+            document.getElementById('intro-title').innerHTML = t['intro-title'];
+            document.getElementById('lang-toggle').innerText = t['btn-lang'];
+        }
+
+        document.getElementById('lang-toggle').addEventListener('click', () => {
+            currentLang = currentLang === 'EN' ? 'CN' : 'EN';
+            updateContent();
+        });
+
+        // Initialize
+        updateContent();
+    </script>
+</body>
+</html>
+
