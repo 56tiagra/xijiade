@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YunHui | The Art of the Dumpling</title>
+    <title>Xijiade | The Art of the Frozen Dumpling</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <script>
@@ -43,12 +43,12 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-12 flex h-20 items-center justify-between">
             <div class="flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f0350f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
-                <span class="text-2xl font-black tracking-tighter uppercase">YunHui</span>
+                <span class="text-2xl font-black tracking-tighter uppercase" data-t="nav-logo">Xijiade</span>
             </div>
             <div class="hidden md:flex items-center gap-12 font-medium text-sm tracking-widest uppercase">
-                <a href="#" class="hover:text-[#f0350f] transition-colors" data-t="nav-menu">Menu</a>
-                <a href="#" class="hover:text-[#f0350f] transition-colors" data-t="nav-philosophy">Philosophy</a>
-                <a href="#" class="hover:text-[#f0350f] transition-colors" data-t="nav-locations">Locations</a>
+                <a href="#products" class="hover:text-[#f0350f] transition-colors" data-t="nav-products">Products</a>
+                <a href="#gallery" class="hover:text-[#f0350f] transition-colors" data-t="nav-gallery">Gallery</a>
+                <a href="#story" class="hover:text-[#f0350f] transition-colors" data-t="nav-story">Our Story</a>
             </div>
             <div class="flex items-center gap-4">
                 <button id="lang-toggle" class="flex items-center gap-2 px-4 py-2 border-2 border-[#f0350f] text-[#f0350f] hover:bg-[#f0350f] hover:text-white transition-all font-bold rounded-lg text-xs tracking-tighter uppercase">
@@ -61,7 +61,7 @@
     <!-- Hero Section -->
     <section class="relative h-[90vh] flex flex-col lg:flex-row overflow-hidden border-b-4 border-[#f0350f]">
         <div class="relative w-full lg:w-1/2 h-1/2 lg:h-full group overflow-hidden border-b-2 lg:border-b-0 lg:border-r-2 border-[#f0350f]">
-            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3CgwOelquldpg5OaOFSpxysYEZ3bsNdr5aPjXdKKg4gpEwogH7hf2LOSqUYEAZnfcSxu6sY3Dt8bTajfUlP5l7wE-vSdrk6gwmGKG8YE-ILBfjgFd9oXmntQb8LvnVqWjfXaLwu8esh-Gvh6HKU8EBqSxHtZiae-hQsrDcMkJowRuoihb4qJ5hY9Lpa1XwG-dGoVx4d-ocE-WdCrMnw9TE0Mc5MdttFYjVgAI0--km-itHLDVt6TCw3FAPnpOVi1vARtGeTvpW3s')"></div>
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('hero_frozen.png')"></div>
             <div class="absolute inset-0 bg-[#f0350f]/10 group-hover:bg-transparent transition-colors duration-500"></div>
             <div class="absolute bottom-8 left-8">
                 <h2 class="text-white text-6xl font-black uppercase leading-none drop-shadow-xl" data-t="hero-dumpling">水饺</h2>
@@ -70,7 +70,7 @@
         </div>
 
         <div class="relative w-full lg:w-1/2 h-1/2 lg:h-full group overflow-hidden">
-            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAMtSQBM33DEzuCJQdIl5bO50xlWAI-cRZ-meYsvr1G0imaIyV6Gl3iis6g9-a_XLuSWJsIyETU610cMWHz8eQjHlGnPMWnQn1CCQIiUDPirhNcyYUaId42Gkoy1tZn5FlHitTlR_kOEnh9bJJSnG0IdVOANcFl7r5Qj8tEuSdUGd4apsFL68q0mAF_MNfNHcNSgwxQp_yRBZrxfAKZ3mLquw12AaS9rjRl5DOBkxqahUDIHgyBhGQnJ5Z440cHq9Xe_B4CXwWbgus')"></div>
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('hero_braised.png')"></div>
             <div class="absolute inset-0 bg-[#f0350f]/10 group-hover:bg-transparent transition-colors duration-500"></div>
             <div class="absolute bottom-8 right-8 text-right">
                 <h2 class="text-white text-6xl font-black uppercase leading-none drop-shadow-xl" data-t="hero-fried-bun">煎包</h2>
@@ -126,11 +126,11 @@
         </div>
     </section>
 
-    <!-- Crafted Daily Section -->
-    <section class="bg-slate-900 text-white py-32">
+    <!-- Products Section -->
+    <section id="products" class="bg-bg-dark py-32 border-b-2 border-slate-900">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-                <h3 class="text-5xl lg:text-7xl font-black uppercase leading-none tracking-tighter">
+                <h3 class="text-5xl lg:text-7xl font-black uppercase leading-none tracking-tighter text-white">
                     <span data-t="crafted-title">CRAFTED</span> <br/><span class="text-[#f0350f]" data-t="crafted-subtitle">DAILY</span>
                 </h3>
                 <p class="max-w-sm text-slate-400 font-medium leading-relaxed" data-t="crafted-desc"></p>
@@ -139,31 +139,74 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div class="group">
                     <div class="aspect-square bg-slate-800 overflow-hidden mb-6 border-b-2 border-[#f0350f]">
-                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkq4hLyWmI8kuEhdGyFWuthSbpKhTii8y2Lge1N59bZSpnJxJNOpnCsMSurLsLYV1O7BQnteRCR9rwbAO-cZNYEYvHk1FLh4Q9TxNX7Pq5jivbLIgSp4Ri7rOalw2_lRvczOha1UlVO-HMLveJtNTj0zvFPOtWHsqNVwNeA7-LyTzYuUy7OtockSR2NeHCWigGmt12z2AGev_dgQ3Zw2wOi2ZRyyVGcq6rBmc36ZUJMSMCZ9YuPgfyoNTDpERBpNv5Sjelw-kaHwI" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <img src="frozen_dumplings_premium.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                     </div>
-                    <h4 class="text-2xl font-bold mb-2" data-t="item-1-name">Pork & Ginger 水饺</h4>
-                    <p class="text-slate-400 text-sm italic" data-t="item-1-desc">The timeless classic, perfectly balanced.</p>
+                    <h4 class="text-2xl font-bold mb-2 text-white" data-t="item-1-name">Pork & Ginger 水饺</h4>
+                    <p class="text-slate-300 text-sm italic" data-t="item-1-desc">The timeless classic, perfectly balanced.</p>
                 </div>
                 <div class="group">
                     <div class="aspect-square bg-slate-800 overflow-hidden mb-6 border-b-2 border-[#f0350f]">
                         <img src="golden_beef_shengjian_bun_1773386061877.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                     </div>
-                    <h4 class="text-2xl font-bold mb-2" data-t="item-2-name">Golden Beef Shengjian Bun</h4>
-                    <p class="text-slate-400 text-sm italic" data-t="item-2-desc">Crispy bottom, juicy beef, and handcrafted perfection.</p>
+                    <h4 class="text-2xl font-bold mb-2 text-white" data-t="item-2-name">金牌生煎包</h4>
+                    <p class="text-slate-300 text-sm italic" data-t="item-2-desc">Crispy bottom, juicy beef, and handcrafted perfection.</p>
                 </div>
                 <div class="group">
                     <div class="aspect-square bg-slate-800 overflow-hidden mb-6 border-b-2 border-[#f0350f]">
                         <img src="wild_mushroom_dumplings_1773385664656.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                     </div>
-                    <h4 class="text-2xl font-bold mb-2" data-t="item-3-name">Wild Mushroom Dumpling</h4>
-                    <p class="text-slate-400 text-sm italic" data-t="item-3-desc">Earthy richness for the plant-inclined.</p>
+                    <h4 class="text-2xl font-bold mb-2 text-white" data-t="item-3-name">Wild Mushroom Dumpling</h4>
+                    <p class="text-slate-300 text-sm italic" data-t="item-3-desc">Earthy richness for the plant-inclined.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Braised & Pickles Gallery -->
+    <section id="gallery" class="bg-bg-light py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="mb-16">
+                <h3 class="text-4xl lg:text-5xl font-black uppercase tracking-tighter mb-4" data-t="gallery-title">Braised & Preserved</h3>
+                <p class="text-slate-500 max-w-lg" data-t="gallery-desc">Our signature braised specialties and hand-crafted pickles, prepared with time-honored techniques.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group relative overflow-hidden rounded-xl aspect-[4/3] border-2 border-slate-900 shadow-lg">
+                    <img src="braised_chicken.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                        <span class="text-white text-xl font-bold uppercase tracking-widest" data-t="gallery-item-1">Braised Chicken</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl aspect-[4/3] border-2 border-slate-900 shadow-lg">
+                    <img src="braised_chicken_feet.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                        <span class="text-white text-xl font-bold uppercase tracking-widest" data-t="gallery-item-2">Braised Chicken Feet</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl aspect-[4/3] border-2 border-slate-900 shadow-lg">
+                    <img src="pickles.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                        <span class="text-white text-xl font-bold uppercase tracking-widest" data-t="gallery-item-3">House Pickles</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl aspect-[4/3] border-2 border-slate-900 shadow-lg">
+                    <img src="braised_beef.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                        <span class="text-white text-xl font-bold uppercase tracking-widest" data-t="gallery-item-4">Braised Beef</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl aspect-[4/3] border-2 border-slate-900 shadow-lg">
+                    <img src="kimchi.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                        <span class="text-white text-xl font-bold uppercase tracking-widest" data-t="gallery-item-5">Spicy Kimchi</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     
     <!-- Blog Section -->
-    <section class="max-w-4xl mx-auto px-6 lg:px-12 py-32">
+    <section id="story" class="max-w-4xl mx-auto px-6 lg:px-12 py-32">
         <div class="flex flex-col gap-12">
             <div class="flex flex-col gap-4">
                 <span class="text-xs font-bold tracking-[0.3em] uppercase text-[#f0350f]" data-t="blog-date">01/02/2026</span>
@@ -184,8 +227,8 @@
     <footer class="bg-[#f8f6f5] border-t-2 border-[#f0350f] pt-24 pb-12">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-12 mb-24">
-                <div class="text-8xl lg:text-[12rem] font-black uppercase tracking-tighter opacity-10 leading-none select-none">
-                    YUNHUI
+                <div class="text-8xl lg:text-[12rem] font-black uppercase tracking-tighter opacity-10 leading-none select-none" data-t="footer-logo">
+                    XIJIADE
                 </div>
                 <div class="space-y-6">
                     <h5 class="text-xl font-bold" data-t="footer-inquiries">Inquiries</h5>
@@ -207,48 +250,58 @@
     <script>
         const translations = {
             EN: {
-                'nav-menu': 'Menu',
-                'nav-philosophy': 'Philosophy',
-                'nav-locations': 'Locations',
-                'hero-dumpling': '水饺',
+                'nav-products': 'Products',
+                'nav-gallery': 'Gallery',
+                'nav-story': 'Our Story',
+                'nav-logo': 'Xijiade',
+                'hero-dumpling': 'SHUIJIAO',
                 'hero-dumpling-sub': 'The Dumpling',
                 'hero-fried-bun': '煎包',
                 'hero-fried-bun-sub': 'The Fried Bun',
                 'hero-coming': 'Coming',
                 'hero-soon': 'Soon',
                 'hero-coming-cn': '敬请期待',
-                'marquee-text': 'Coming Soon 敬请期待 • YunHui Editorial Table • ',
-                'intro-title': 'THE ART <br/>OF THE <br/><span class="text-[#f0350f] italic">DUMPLING</span>',
-                'intro-subtitle': 'Heritage meets the modern plate.',
-                'intro-desc': 'Our recipes are passed down through generations, refined for the contemporary palate without losing the soul of the traditional kitchen.',
-                'intro-subtitle-cn': '传承与现代交汇。',
-                'intro-desc-cn': '我们的食谱代代相传，为当代口味进行改良，同时不失传统厨房的灵魂。',
-                'intro-quote': '"YunHui isn\'t just a meal; it\'s a narrative of tradition and technique."',
-                'intro-quote-author': 'Traditionalist Review',
-                'crafted-title': 'CRAFTED',
-                'crafted-subtitle': 'DAILY',
-                'crafted-desc': 'Fresh ingredients, handmade dough, and the perfect sear. Our dumplings and buns are prepared in small batches to ensure excellence.',
-                'item-1-name': 'Pork & Ginger Dumpling',
-                'item-1-desc': 'The timeless classic, perfectly balanced.',
+                'marquee-text': 'Coming Soon 敬请期待 • Xijiade Premium Frozen • ',
+                'intro-title': 'MASTERING <br/>THE <br/><span class="text-[#f0350f] italic">FROZEN</span> ART',
+                'intro-subtitle': 'Premium frozen, freshly delivered.',
+                'intro-desc': 'We specialize in artisanal frozen dumplings and buns, flash-frozen at peak freshness to preserve every bit of flavor and texture for your home kitchen.',
+                'intro-subtitle-cn': '极速冷冻，新鲜送达。',
+                'intro-desc-cn': '我们专注于手工速冻水饺和面点，通过先进冷冻技术锁住新鲜，让您在家也能享受大师级的美味。',
+                'intro-quote': '"Xijiade isn\'t just convenience; it\'s the new standard for frozen quality."',
+                'intro-quote-author': 'Culinary Excellence Review',
+                'crafted-title': 'FROZEN',
+                'crafted-subtitle': 'PREMIUM',
+                'crafted-desc': 'Flash-frozen at the peak of freshness. Our dumplings and buns go from freezer to table in minutes without compromising on quality.',
+                'item-1-name': 'Frozen Pork & Ginger',
+                'item-1-desc': 'Perfectly preserved, ready to boil or steam.',
                 'item-2-name': 'Golden Beef Shengjian Bun',
                 'item-2-desc': 'Crispy bottom, juicy beef, and handcrafted perfection.',
                 'item-3-name': 'Wild Mushroom Dumpling',
                 'item-3-desc': 'Earthy richness for the plant-inclined.',
+                'gallery-title': 'Braised & Preserved',
+                'gallery-desc': 'Our signature braised specialties and hand-crafted pickles, prepared with time-honored techniques.',
+                'gallery-item-1': 'Braised Chicken',
+                'gallery-item-2': 'Braised Chicken Feet',
+                'gallery-item-3': 'House Pickles',
+                'gallery-item-4': 'Braised Beef',
+                'gallery-item-5': 'Spicy Kimchi',
+                'footer-logo': 'XIJIADE',
                 'footer-inquiries': 'Inquiries',
-                'footer-copyright': '© 2026 YUNHUI',
+                'footer-copyright': '© 2026 XIJIADE',
                 'btn-lang': 'EN | 中文',
-                'blog-title': 'The Story of Dumplings',
+                'blog-title': 'The Story of Xijiade Dumplings',
                 'blog-date': '01/02/2026',
-                'blog-p1': 'Chinese dumplings date back nearly 2,000 years. According to legend, the famous physician Zhang Zhongjing created dumplings during a harsh winter to help villagers stay warm and healthy.',
+                'blog-p1': 'Chinese dumplings date back nearly 2,000 years, a tradition that Xijiade honors by bringing the finest flavors to your home through premium freezing technology.',
                 'blog-p2': 'Over time, dumplings became a symbol of family reunion and good fortune. During Chinese New Year, families gather to make dumplings together, celebrating happiness and prosperity.',
                 'blog-p3': 'Shaped like ancient Chinese gold ingots, dumplings represent wealth and good luck.',
                 'blog-p4': 'At our restaurant, we continue this tradition with freshly made dumplings prepared with care and authentic flavors.',
                 'blog-p5': 'Every dumpling carries a taste of Chinese culture and history.'
             },
             CN: {
-                'nav-menu': '菜单',
-                'nav-philosophy': '理念',
-                'nav-locations': '门店',
+                'nav-products': '产品',
+                'nav-gallery': '画廊',
+                'nav-story': '品牌故事',
+                'nav-logo': '喜家德',
                 'hero-dumpling': '水饺',
                 'hero-dumpling-sub': '传统手工水饺',
                 'hero-fried-bun': '煎包',
@@ -256,29 +309,37 @@
                 'hero-coming': '敬请',
                 'hero-soon': '期待',
                 'hero-coming-cn': 'Coming Soon',
-                'marquee-text': '敬请期待 Coming Soon • 云徽食桌 YunHui Editorial Table • ',
-                'intro-title': '水饺的 <br/><span class="text-[#f0350f] italic">艺术</span>',
-                'intro-subtitle': '传承与现代交汇。',
-                'intro-desc': '我们的食谱代代相传，为当代口味进行改良，同时不失传统厨房的灵魂。',
-                'intro-subtitle-cn': 'Heritage meets the modern plate.',
-                'intro-desc-cn': 'Our recipes are passed down through generations, refined for the contemporary palate.',
-                'intro-quote': '"云徽不仅是一顿饭；它是传统与技艺的叙事。"',
-                'intro-quote-author': '传统主义评论',
-                'crafted-title': '每日',
-                'crafted-subtitle': '手作',
-                'crafted-desc': '新鲜食材，手工面团，完美煎制。我们的水饺和煎包均小批量制作，以确保品质卓越。',
-                'item-1-name': '猪肉生姜水饺',
-                'item-1-desc': '永恒的经典，完美的平衡。',
+                'marquee-text': '敬请期待 Coming Soon • 喜家德精品速冻 Xijiade Premium Frozen • ',
+                'intro-title': '锁住 <br/><span class="text-[#f0350f] italic">新鲜</span> 的艺术',
+                'intro-subtitle': '精品速冻，新鲜到家。',
+                'intro-desc': '我们专注于手工速冻水饺和面点，通过先进冷冻技术锁住新鲜，让您在家也能享受大师级的美味。',
+                'intro-subtitle-cn': 'Premium frozen, freshly delivered.',
+                'intro-desc-cn': 'We specialize in artisanal frozen dumplings and buns, flash-frozen at peak freshness to preserved every bit of flavor and texture.',
+                'intro-quote': '"喜家德不仅仅是方便；它是速冻品质的新标准。"',
+                'intro-quote-author': '烹饪卓越评论',
+                'crafted-title': '极速',
+                'crafted-subtitle': '锁鲜',
+                'crafted-desc': '在最新鲜的时刻进行极速冷冻。我们的水饺和包子从冰箱到餐桌只需几分钟，品质毫不妥协。',
+                'item-1-name': '精品速冻猪肉生姜',
+                'item-1-desc': '完美保存，随时下锅，鲜美如初。',
                 'item-2-name': '金牌牛肉煎包',
-                'item-2-desc': '脆爽与多汁的碰撞，咸鲜深厚。',
+                'item-2-desc': '脆爽与多汁的完美融合，手工匠心。',
                 'item-3-name': '野山珍蔬饺',
                 'item-3-desc': '为素食者准备的大地芬芳。',
+                'gallery-title': '卤味 & 泡菜',
+                'gallery-desc': '我们的招牌卤味和手工腌制泡菜，采用传统技艺精心准备，是您餐桌的最佳伴侣。',
+                'gallery-item-1': '招牌卤鸡',
+                'gallery-item-2': '香卤鸡爪',
+                'gallery-item-3': '手工泡菜',
+                'gallery-item-4': '五香卤牛肉',
+                'gallery-item-5': '韩式泡菜',
+                'footer-logo': '喜家德',
                 'footer-inquiries': '咨询',
-                'footer-copyright': '© 2026 云徽.',
+                'footer-copyright': '© 2026 喜家德.',
                 'btn-lang': '中文 | EN',
-                'blog-title': '饺子的由来（餐厅文化介绍版）',
+                'blog-title': '喜家德的饺子故事',
                 'blog-date': '2026年2月1日',
-                'blog-p1': '相传在中国东汉时期，名医 张仲景 在寒冬返乡时，看到百姓因严寒贫困，许多人耳朵冻伤。他便将羊肉、草药和面皮包成耳朵形状的小食，煮熟后分给乡亲食用，用来驱寒养身。人们称这种食物为“娇耳”，后来逐渐演变成今天的“饺子”。',
+                'blog-p1': '相传在中国东汉时期，名医张仲景创造了饺子。喜家德传承这一千年传统，通过领先的速冻技术，将最地道的美味带入千家万户。',
                 'blog-p2': '经过一千多年的传承，饺子不仅是一种美食，更成为中国团圆与幸福的象征。每逢重要节日，尤其是 Chinese New Year，一家人围坐在一起包饺子，寓意团圆、财富与吉祥。',
                 'blog-p3': '饺子的形状像古代金元宝，象征富足与好运。薄皮包裹鲜馅，水煮、蒸制或煎制，都能呈现出丰富而温暖的味道。',
                 'blog-p4': '在这里，我们坚持手工制作、现包现煮，希望把这份流传千年的中国传统味道带给每一位来到店里的朋友。',
