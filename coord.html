@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body style="margin: 0; padding: 0;">
+    <img src="hero_packaged_braised_chicken.png" id="img1" style="width: 640px; height: 640px; display: block;" />
+    <img src="../.gemini/antigravity/brain/8ae195f2-8ec9-4a75-a237-2b6fd6c482f9/gallery_packaged_braised_beef_1773438036876.png" id="img2" style="width: 640px; height: 640px; display: block; margin-top: 20px;" />
+    
+    <div id="result" style="font-size: 30px; font-weight: bold; background: yellow; position: fixed; right: 20px; top: 20px; padding: 10px; border: 2px solid black;">
+        Click on the '嘉' character in both images.
+    </div>
+    
+    <script>
+        let clicks = [];
+        document.getElementById('img1').addEventListener('click', (e) => {
+            clicks.push('Img1[Chicken]: ' + e.offsetX + ',' + e.offsetY);
+            updateResult();
+        });
+        document.getElementById('img2').addEventListener('click', (e) => {
+            clicks.push('Img2[Beef]: ' + e.offsetX + ',' + e.offsetY);
+            updateResult();
+        });
+        function updateResult() {
+            document.getElementById('result').innerText = clicks.join(' | ');
+        }
+    </script>
+</body>
+</html>
